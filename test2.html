@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人员名单 - Pornhub 风格</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: white;
+            text-align: center;
+            margin: 50px;
+        }
+
+        /* 标题 */
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff9800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* 人员列表 */
+        .person-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* 每个人的样式 */
+        .person {
+            background: #333;
+            padding: 15px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        /* 悬停时效果 */
+        .person:hover {
+            border-color: #ff9800;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PORN STARS</h1>
+    <ul class="person-list">
+        <li class="person">Abraham</li>
+        <li class="person">Andy</li>
+        <li class="person">Mathew</li>
+        <li class="person">William</li>
+        <li class="person">Frank</li>
+        <li class="person">Justin</li>
+        <li class="person">Tyler</li>
+        <li class="person">Eason</li>
+        <li class="person">Mike</li>
+        <li class="person">Tom</li>
+        <li class="person">Thomas</li>
+        <li class="person">Mark</li>
+        <li class="person">Kevin</li>
+        <li class="person">Richie</li>
+        <li class="person">Bob</li>
+        <li class="person" id="james">James</li>
+        <li class="person">Miller</li>
+        <li class="person">Eric</li>
+        <li class="person">Kris</li>
+    </ul>
+        <script>
+            document.getElementById("james").addEventListener("mousedown",function(){
+               window.location.href = "james.html"
+            });
+        </script>
+</body>
+</html>
