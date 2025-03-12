@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Teen</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素坐标</title>
+    <style>
+        #myElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
 </head>
 <body>
-    <img src="image/AI.gif"/></body>
+
+    <div id="myElement">获取我的坐标</div>
+    <button onclick="getPosition()">获取坐标</button>
+    <p id="output"></p>
+
+    <script>
+        function getPosition() {
+            let element = document.getElementById("myElement");
+            let rect = element.getBoundingClientRect();  // 获取坐标信息
+
+            let output = `X: ${rect.left}, Y: ${rect.top}`;
+            document.getElementById("output").innerText = output;
+        }
+    </script>
+
+</body>
 </html>

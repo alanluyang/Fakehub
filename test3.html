@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标悬停显示图片</title>
+    <style>
+        .person-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .person {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .preview {
+            display: none; /* 默认隐藏 */
+            width: 200px;
+            height: auto;
+            margin-left: 10px; /* 控制图片与文字的间距 */
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="person-list">
+        <li class="button person" id="Abraham" data-image="image/XYR2.jpg">Abraham</li>
+        <li class="button person" id="John" data-image="image/XBR.jpg">John</li>
+        <li class="button person" id="Alice" data-image="image/ZCH.gif">Alice</li>
+    </ul>
+
+    <!-- 图片显示区域 -->
+    <img class="preview" id="previewImage" src="" alt="预览图片">
+
+    <script>
+        const persons = document.querySelectorAll(".person");
+        const previewImage = document.getElementById("previewImage");
+
+        persons.forEach(person => {
+            person.addEventListener("mouseover", function() {
+                const imageUrl = this.getAttribute("data-image");
+                previewImage.src = imageUrl;
+                previewImage.style.display = "block"; // 显示图片
+            });
+
+            person.addEventListener("mouseout", function() {
+                previewImage.style.display = "none"; // 隐藏图片
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -49,31 +49,62 @@
             border-color: #ff9800;
             transform: scale(1.1);
         }
+        .preview {
+            display: none;
+            width: 400px;
+            position: absolute;
+            top: 350px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 鼠标悬停时显示图片 */
+        .button:hover + .preview {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <h1>PORN STARS</h1>
     <ul class="person-list">
-        <li class="person">Abraham</li>
-        <li class="person">Andy</li>
-        <li class="person">Mathew</li>
-        <li class="person">William</li>
-        <li class="person">Frank</li>
-        <li class="person">Justin</li>
-        <li class="person">Tyler</li>
-        <li class="person">Eason</li>
-        <li class="person">Mike</li>
-        <li class="person">Tom</li>
-        <li class="person">Thomas</li>
-        <li class="person">Mark</li>
-        <li class="person">Kevin</li>
-        <li class="person">Richie</li>
-        <li class="person">Bob</li>
-        <li class="person" id="james">James</li>
-        <li class="person">Miller</li>
-        <li class="person">Eric</li>
-        <li class="person">Kris</li>
+        <li class="button person" id="Abraham">Abraham</li>
+            <img class="preview" src="image/untitled folder/Abraham.pic.jpg"/>
+        <li class="button person" id="Andy">Andy</li>
+            <img class="preview" src="image/untitled folder/Andy.jpg"/>
+        <li class="button person">Mathew</li>
+            <img class="preview" src="image/untitled folder/Mathew.pic.jpg"/>
+        <li class="button person">William</li>
+            <img class="preview" src="image/untitled folder/William.jpg"/>
+        <li class="button person">Frank</li>
+            <img class="preview" src="image/untitled folder/Frank2.jpg"/>
+        <li class="button person">Justin</li>
+        <li class="button person">Tyler</li>
+            <img class="preview" src="image/untitled folder/Tyler.jpg"/>
+        <li class="button person">Eason</li>
+            <img class="preview" src="image/untitled folder/Eason.jpg"/>
+        <li class="button person">Mike</li>
+            <img class="preview" src="image/untitled folder/Mike.jpg"/>
+        <li class="button person">Tom</li>
+            <img class="preview" src="image/untitled folder/Tom.jpg"/>
+        <li class="button person">Thomas</li>
+            <img class="preview" src="image/untitled folder/Thomas.jpg"/>
+        <li class="button person">Mark</li>
+            <img class="preview" src="image/untitled folder/YHB.pic.jpg"/>
+        <li class="button person">Kevin</li>
+            <img class="preview" src="image/untitled folder/KEV.jpg"/>
+        <li class="button person">Richie</li>
+            <img class="preview" src="image/untitled folder/Richie.jpg"/>
+        <li class="button person">Bob</li>
+        <li class="button person" id="james">James</li>
+        <li class="button person">Miller</li>
+        <li class="button person">Eric</li>
+        <li class="button person">Kris</li>
+        <li class="button person">Mosses</li>
+        <li class="button person">Ryan</li>
+        <li class="button person">Jerry</li>
     </ul>
         <script>
             document.getElementById("james").addEventListener("mousedown",function(){
